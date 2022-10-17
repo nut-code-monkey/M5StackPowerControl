@@ -1,0 +1,26 @@
+{
+    "name": "M5StackPowerControl",
+    "version": "1.0.0",
+    "description": "Power control view that shows current charge of M5Stack battery",
+    "keywords": "m5stack, power, control, charge, view, battery",
+    "repository":
+    {
+      "type": "git",
+      "url": "https://github.com/nut-code-monkey/M5StackPowerControl.git"
+    },
+    "authors":
+    [
+      {
+        "name": "Maksym Lunin",
+        "email": "nut.code.monkey@gmail.com",
+        "maintainer": true
+      }
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/nut-code-monkey/M5StackPowerControl",
+    "dependencies": {
+      "m5stack/M5Stack": "*"
+    },
+    "frameworks": "arduino",
+    "platforms": "espressif32"
+  }
