@@ -4,16 +4,16 @@
 #include <cstdint>
 #include <M5Stack.h>
 
-
 class PowerControl {
-struct State;
 private:
     TFT_eSprite sprite;
+    bool isOn = false;
 public:
     PowerControl(M5Display *);
     ~PowerControl();
     uint16_t color = TFT_WHITE;
-    uint16_t background = TFT_BLACK;
+    uint16_t charging = TFT_GREEN;
+    uint16_t background = TFT_TRANSPARENT;
     int16_t width();
     int16_t height();
 
