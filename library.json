@@ -1,6 +1,6 @@
 {
     "name": "M5StackPowerControl",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Power control view that shows current charge of M5Stack battery",
     "keywords": "m5stack, power, control, charge, view, battery",
     "repository":
