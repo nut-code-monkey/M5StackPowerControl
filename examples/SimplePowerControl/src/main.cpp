@@ -18,8 +18,8 @@ void loop() {
     // Draw battery on upper left corner
     power.drawAt(0, 0); 
 
-    M5.update(); 
+    M5.BtnA.read();
     if (M5.BtnA.pressedFor(3000)) {
-        M5.Power.powerOFF();
+        M5.powerOFF();
     }
 }

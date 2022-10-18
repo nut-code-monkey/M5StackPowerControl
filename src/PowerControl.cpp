@@ -37,25 +37,25 @@ void PowerControl::drawAt(int16_t x, int16_t y) {
     sprite.fillSprite(background);
     
     // Draw frame
-    sprite.drawLine(0, 1, 0, 8, drawColor);
-    sprite.drawLine(1, 0, 13, 0, drawColor);
-    sprite.drawLine(1, 9, 13, 9, drawColor);
-    sprite.drawLine(14, 1, 14, 8, drawColor);
+    sprite.drawFastVLine(0, 1, 7, drawColor);
+    sprite.drawFastHLine(1, 0, 12, drawColor);
+    sprite.drawFastHLine(1, 9, 12, drawColor);
+    sprite.drawFastVLine(14, 1, 7, drawColor);
     if (isCharging) {
         if (isOn) {
-            sprite.drawLine(15, 3, 15, 6, drawColor);
+            sprite.drawFastVLine(15, 3, 3, drawColor);
         }
     } else {
-        sprite.drawLine(15, 3, 15, 6, drawColor);
-    } 
+        sprite.drawFastVLine(15, 3, 3, drawColor);
+    }
     
     const int level_bars = M5.Power.getBatteryLevel() / 25;
     const int display_bars = min(4, level_bars + ((isCharging && isOn) ? 1:0));
     
     for (int i = 0; i < display_bars; ++i) {
         int n = i*3 + 2;
-        sprite.drawLine(n,   2, n,   7, drawColor);
-        sprite.drawLine(n+1, 2, n+1, 7, drawColor);
+        sprite.drawFastVLine(n,   2, 5, drawColor);
+        sprite.drawFastVLine(n+1, 2, 5, drawColor);
     }
 
     sprite.pushSprite(x, y);
