@@ -4,7 +4,7 @@ PowerControl::PowerControl(M5Display *display)
 : sprite(TFT_eSprite(display))
  {
     sprite.setColorDepth(8);
-    sprite.createSprite(16, 10);
+    sprite.createSprite(16, 9);
 }
 
 PowerControl::~PowerControl() {
@@ -38,8 +38,8 @@ void PowerControl::drawAt(int16_t x, int16_t y) {
     
     // Draw frame
     sprite.drawFastVLine(0, 1, 7, drawColor);
-    sprite.drawFastHLine(1, 0, 12, drawColor);
-    sprite.drawFastHLine(1, 9, 12, drawColor);
+    sprite.drawFastHLine(1, 0, 13, drawColor);
+    sprite.drawFastHLine(1, 8, 13, drawColor);
     sprite.drawFastVLine(14, 1, 7, drawColor);
     if (isCharging) {
         if (isOn) {
